@@ -26,15 +26,6 @@ export const routes: Routes = [
       }).then((m) => m.OverviewModule),
   },
   {
-    path: 'nkv',
-    loadChildren: () =>
-      loadRemoteModule({
-        type: 'module',
-        remoteEntry: 'https://neo-local-dev:4300/remoteEntry.js',
-        exposedModule: './OverviewModule',
-      }).then((m) => m.OverviewModule),
-  },
-  {
     path: '**',
     redirectTo: '',
   },
