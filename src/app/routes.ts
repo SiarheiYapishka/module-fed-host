@@ -8,13 +8,13 @@ export const routes: Routes = [
     component: WelcomeComponent,
   },
   {
-    path: 'weather',
+    path: 'nkv',
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
         remoteEntry: 'http://localhost:5100/remoteEntry.js',
-        exposedModule: './WeatherWidgetModule',
-      }).then((m) => m.WeatherWidgetModule),
+        exposedModule: './Routes'
+      }).then((m) => m.routes),
   },
   {
     path: 'alerts',
@@ -22,6 +22,15 @@ export const routes: Routes = [
       loadRemoteModule({
         type: 'module',
         remoteEntry: 'http://localhost:5000/remoteEntry.js',
+        exposedModule: './OverviewModule',
+      }).then((m) => m.OverviewModule),
+  },
+  {
+    path: 'nkv',
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'https://neo-local-dev:4300/remoteEntry.js',
         exposedModule: './OverviewModule',
       }).then((m) => m.OverviewModule),
   },
