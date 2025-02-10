@@ -20,6 +20,7 @@ module.exports = {
         "@angular/common/http": { singleton: true, strictVersion: false, requiredVersion: "auto" },
         "@angular/router": { singleton: true, strictVersion: false, requiredVersion: "auto" },
         "@ng-mf/shared": { singleton: true, strictVersion: false, requiredVersion: "auto" },
+        "@ngrx/store": {singleton: true, strictVersion: false, requiredVersion: "auto"}
       },
     }),
   ],

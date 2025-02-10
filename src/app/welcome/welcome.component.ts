@@ -5,6 +5,7 @@ import { SharedService } from '@ng-mf/shared';
   selector: 'shell-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
+  standalone: false,
 })
 export class WelcomeComponent implements OnInit {
   user = this.sharedService.userName;
