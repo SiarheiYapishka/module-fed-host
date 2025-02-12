@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '@ng-mf/shared';
 
 @Component({
   selector: 'shell-welcome',
@@ -8,13 +7,11 @@ import { SharedService } from '@ng-mf/shared';
   standalone: false,
 })
 export class WelcomeComponent implements OnInit {
-  user = this.sharedService.userName;
+  user = 'a'
   newName = '';
-  constructor(private sharedService: SharedService) {}
 
   ngOnInit(): void {}
 
   update() {
-    this.sharedService.userName.next(this.newName);
   }
 }
